@@ -1,6 +1,7 @@
 const {app, BrowserWindow} = require('electron');
 const path = require('path');
 const url = require('url');
+const {enable, destory} = require('splash-screen');
 
 let win;
 
@@ -19,10 +20,16 @@ win.webContents.openDevTools();
 win.on('closed', () => {
   win = null;
 });
+
+// win.loadURL('img/spinegiphy');
 }
 
 //run create window function
 app.on('ready', createWindow);
+
+// enable('tailing');
+// destory();
+
 
 //quit when all windows are closed
 app.on('window-all-closed', () => {

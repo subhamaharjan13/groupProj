@@ -1,0 +1,35 @@
+body {
+  background-color: #95c4ce;
+  color: #fff;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+img {
+  position: absolute;
+  display: block;
+  max-width: 100%;
+  max-height: auto;
+  width: 480px;
+  height: 480px;
+  top: 50%;
+  left: 50%;
+  margin-top: -340px;
+  margin-left: -240px;
+}
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 80px;
+  margin-left: -180px;
+  font-size: 70px;
+  font-weight: 800;
+}
+h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 180px;
+  margin-left: -235px;
+  font-size: 50px;
+  font-weight: 500;
+}

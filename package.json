@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^3.0.9"
+  },
+  "dependencies": {
+    "splash-screen": "^4.0.1"
   }
 }

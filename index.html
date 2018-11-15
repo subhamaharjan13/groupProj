@@ -4,53 +4,52 @@
     <meta charset="utf-8">
     <title>backTrack</title>
     <link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
-    <style>
-    body{
-      background-color:	#95c4ce;
-    }
-    .loader{
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background-position: center;
-      background-size: cover;
-      z-index: 99999;
-    }
-    .loader.hidden{
-      animation: fadeOut 1s;
-      animation-fill-mode: forwards;
-    }
+    <link rel="stylesheet" type="text/css" href="node_modules/splash-screen/dist/splash-screen.min.css">
 
-    @keyframes fadeOut {
-      100% {
-        opacity: 0;
-        visibility: hidden;
-      }
-    }
-    </style>
+  <style type="text/css">
+		
+	</style>
+</head>
+<body id="splash">
 
-  </head>
-  <body>
-  <!-- <body onload="myFunction()"> -->
-    <div class="loader">
-      <img src="img/spinegiphy.gif"
-    </div>
+	<img src="img/spinegiphy.gif">
+	<h1>SpineLine</h1>
+	<h2>We've got your Back</h2>
+
+	<script type="text/javascript">
+		(function() {
+			var splash = document.getElementById("splash");
+			var loading = 0;
+			var id = setInterval(main, 64);
+
+			function main() {
+				if (loading == 100) {
+					clearInterval(id);
+					window.open("startpage.html", "_self");
+				} else {
+					loading = loading + 1;
+					if (loading == 90) {
+						splash.style.animation = "fadeout 1s ease";
+					}
+				}
+			}
+		})();
+	</script>
+</body>
 
 
-    <h1>SpineLine</h1>
-    <h3>We've got your Back</h3>
 
-  </body>
-  <script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
+<script>
     require('./renderer.js');
-    window.addEventListener("load", function(){
-      const loader = document.querySelector(".loader");
-      loader.className += "hidden";
-    });
+ //    $('.enter_link').click(function() {
+ //        $(this).parent().fadeOut(500);
+ // });
+ //  const splash = window['splash-screen'];
+ //  splash.enable('spinegiphy.gif');
+ //  splash.destory();
 
-    // var preloader = document.getElementById('loader');
-    // function myFunction(){
-    //   preloader.style.display = 'none';
-    // }
+
   </script>
 </html>
