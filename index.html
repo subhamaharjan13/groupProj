@@ -5,16 +5,17 @@
     <title>backTrack</title>
     <link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="node_modules/splash-screen/dist/splash-screen.min.css">
+    <link rel='stylesheet' href='stylesheets/splash.css' />
 
-  <style type="text/css">
-		
-	</style>
-</head>
-<body id="splash">
-
-	<img src="img/spinegiphy.gif">
+  </head>
+<body>
+<div id="splash" class="splash">
+  <img class="splashimg" src="img/spinegiphy.gif">
 	<h1>SpineLine</h1>
 	<h2>We've got your Back</h2>
+</div>
+
+<h1>Hello</h1>
 
 	<script type="text/javascript">
 		(function() {
@@ -23,12 +24,12 @@
 			var id = setInterval(main, 64);
 
 			function main() {
-				if (loading == 100) {
+				if (loading == 70) {
 					clearInterval(id);
-					window.open("startpage.html", "_self");
+					splash.style.display = "none";
 				} else {
 					loading = loading + 1;
-					if (loading == 90) {
+					if (loading == 60) {
 						splash.style.animation = "fadeout 1s ease";
 					}
 				}
@@ -43,12 +44,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
 <script>
     require('./renderer.js');
- //    $('.enter_link').click(function() {
- //        $(this).parent().fadeOut(500);
- // });
- //  const splash = window['splash-screen'];
- //  splash.enable('spinegiphy.gif');
- //  splash.destory();
 
 
   </script>
